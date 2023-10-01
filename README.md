@@ -61,4 +61,4 @@ To play the WORDLE game:
 
 ## Author
 
-Created by Vadym Chervoniak
+(č) Vadym Chervoniak
