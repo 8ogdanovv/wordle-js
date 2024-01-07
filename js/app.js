@@ -81,7 +81,7 @@ function check() {
     if (dictionary.includes(resStr)) {
         localStorage.setItem(`row${row_index}`, resStr);
         let attempt = localStorage.getItem(`row${row_index}`);
-        if (row_index < 6) {
+        if (row_index <= 6) {
             row_index++;
         }
         localStorage.removeItem('row_index');
@@ -94,9 +94,9 @@ function check() {
             check_button.removeEventListener('click', check);
             check_button.classList.remove('activated');
             console.log('Congratulations! You won.');
-            alert('Congratulations! You won.');
+            setTimeout(() => alert('Congratulations! You won.'), 500)
             return;
-        } else if (row_index === 6 && attempt !== word) {
+        } else if (row_index === 7 && attempt !== word) {
             check_button.removeEventListener('click', check);
             check_button.classList.remove('activated');
             console.log('Game over.');
